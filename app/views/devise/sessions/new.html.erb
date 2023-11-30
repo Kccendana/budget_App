@@ -1,0 +1,25 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class='form-head'>
+    <%= link_to root_path do %>
+      <i class="fa fa-arrow-left"></i>
+    <% end %>
+
+
+    <h2>Log in</h2>
+    <div class="actions">
+    <%= f.submit "Log in", class: 'btn', style: 'color:white; background-color:transparent;'%>
+  </div>
+  </div>
+
+  <div class="form-floating">
+  <%= f.email_field :email, class: 'form-control', id: 'floatingInput', placeholder: 'name@example.com' %>
+  <%= f.label :email, "Email address", class: 'form-label', for: 'floatingInput' %>
+</div>
+
+  <div class="form-floating mb-3">
+  <%= f.password_field :password, class: 'form-control', id: 'floatingPassword', placeholder: 'Password' %>
+  <%= f.label :password, "Password", class: 'form-label', for: 'floatingPassword' %>
+  </div>
+<% end %>
+
+ <%= link_to "Forgot your password?", new_password_path(resource_name), class:'text-align-center'%>
