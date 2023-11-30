@@ -1,0 +1,17 @@
+<div class='form-head'>
+    <%= link_to categories_path do %>
+      <i class="fa fa-arrow-left"></i>
+    <% end %>
+    <h2>Transactions</h2>
+    <div class="actions">
+      <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn",style: 'color:white; background-color:transparent;' %>
+    </div>
+  </div>
+<div>
+<div id="list-con">
+  <% @payments.each do |payment| %>
+    <%= render payment %>
+  <% end %>
+</div>
+
+<%= link_to "New payment", new_category_payment_path, class: 'btn w-100 p-2', style: 'color:white; background-color:#5fb523;'%>
