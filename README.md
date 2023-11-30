@@ -56,8 +56,8 @@ BudgetBuddy is a dynamic mobile web application designed to empower users in eff
 
 ## Live Demo
 
-- [Live Demo]()
-- [Project video Link]()
+- [Live Demo](https://budgetbuddy-ayir.onrender.com/)
+- [Project video Link](https://www.loom.com/share/ccc03c748c04485ba303156c3422f3c5)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
