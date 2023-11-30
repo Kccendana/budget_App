@@ -84,7 +84,7 @@ Clone this repository by using the command line to your desired folder:
 ```sh
 git clone  https://github.com/Kccendana/budget_App.git
 
-cd budget-manager
+cd budget_App
 ```
 
 ### Install
@@ -92,7 +92,7 @@ cd budget-manager
 Install this project with:
 
 ```sh
-cd budget-manager
+cd budget_App
  bundle install (install all dependencies)
 ```
 
