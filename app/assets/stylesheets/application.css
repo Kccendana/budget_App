@@ -17,7 +17,7 @@
 
 :root {
   --primary: #3778c2;
-  --bs-secondary: #5fb523;
+  --secondary-color: #5fb523;
   --text-color: #434b54;
 }
 
@@ -90,7 +90,6 @@ a.text-align-center {
   align-items: center;
   padding-top: 1em;
   padding-bottom: 1em;
-  overflow: scroll;
 }
 
 .home-container {
@@ -105,4 +104,9 @@ a.text-align-center {
   flex-direction: column;
   justify-content: space-between;
   height: 90vh;
+}
+
+.button-con {
+  background: var(--secondary-color);
+  padding: 0.75em;
 }
