@@ -14,7 +14,6 @@ RSpec.feature 'Payment', type: :feature do
   end
   scenario 'User adds payment to category' do
     category = Category.create(name: 'house', icon: 'house.png', user: User.first)
-
     visit category_payments_path(category)
     expect(page).to have_content('Transactions')
     click_link 'New payment'
