@@ -5,17 +5,17 @@
     <% end %>
     <h2>Payments</h2>
     <div class="actions">
-      <%= f.submit "Next", class: 'btn', style: 'color:white; background-color:transparent;' %>
+      <%= f.submit "Add", class: 'btn', style: 'color:white; background-color:transparent;' %>
     </div>
   </div>
 
   <div class="form-floating">
-    <%= f.text_field :name, class: 'form-control', id: 'floatingInput', placeholder: 'education' %>
+    <%= f.text_field :name, class: 'form-control', id: 'floatingInput', placeholder: 'Name' %>
     <%= f.label :name, "Name", class: 'form-label', for: 'floatingInput' %>
   </div>
 
   <div class="form-floating">
-    <%= f.text_field :amount, class: 'form-control', id: 'floatingInput', placeholder: 'nike.png' %>
+    <%= f.text_field :amount, class: 'form-control', id: 'floatingInput', placeholder: 'Amount' %>
     <%= f.label :amount, "Amount", class: 'form-label', for: 'floatingInput' %>
   </div>
 

@@ -1,6 +1,12 @@
 <div class="lists-items">
-   <%= image_tag(category.icon, alt: 'Example Image') %>
-   <p><%= category.name %></p>
-   <p>Total:$ <%= category.total_transaction_amount %></p>
+  <% image_path = begin
+                    image_path = image_path(category.icon)
+                  rescue Sprockets::Rails::Helper::AssetNotFound
+                    asset_path('home.png')
+                  end
+  %>
+  <%= image_tag(image_path, alt: category.name) %>
+  <p><%= category.name %></p>
+  <p>Total: $<%= category.total_transaction_amount %></p>
 </div>
 
