@@ -7,7 +7,8 @@
       <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn",style: 'color:white; background-color:transparent;' %>
     </div>
   </div>
-<% if @categories.nil? %>
+<div class= 'container-view'>
+  <% if @categories.nil? %>
       <h3>Add a Category</h3>
     <% else %>
   <div id="list-con">
@@ -20,3 +21,4 @@
 <% end %>
 
 <%= link_to "Add category", new_category_path, class: 'btn w-100 p-2', style: 'color:white; background-color:#5fb523;' %>
+</div>

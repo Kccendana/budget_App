@@ -32,7 +32,7 @@
 }
 
 .title {
-  height: 500px;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,4 +90,19 @@ a.text-align-center {
   align-items: center;
   padding-top: 1em;
   padding-bottom: 1em;
+  overflow: scroll;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.container-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
 }

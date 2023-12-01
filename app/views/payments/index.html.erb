@@ -8,10 +8,13 @@
     </div>
   </div>
 <div>
-<div id="list-con">
+<div class='container-view'>
+  <div id="list-con">
   <% @payments.each do |payment| %>
     <%= render payment %>
   <% end %>
 </div>
 
-<%= link_to "New payment", new_category_payment_path, class: 'btn w-100 p-2', style: 'color:white; background-color:#5fb523;'%>
+ <%= link_to "New payment", new_category_payment_path, class: 'btn w-100 p-2', style: 'color:white; background-color:#5fb523;'%>
+
+</div>
