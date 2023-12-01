@@ -1,15 +1,112 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
+/* /*
+ *= require font-awesome
  */
+@import 'font-awesome';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lato, sans-serif;
+  text-decoration: none;
+  list-style: none;
+  color: var(--text-color);
+}
+
+:root {
+  --primary: #3778c2;
+  --secondary-color: #5fb523;
+  --text-color: #434b54;
+}
+
+.bg-green {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.bg-blue {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.title {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0.5em;
+  color: white;
+  background: var(--primary);
+}
+
+.form-head i {
+  color: white;
+}
+
+a.text-align-center {
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+}
+
+.lists-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20em;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 0.5em 0.5em;
+  height: 5em;
+}
+
+.lists-items p {
+  margin: 0;
+}
+
+.lists-items img {
+  width: auto;
+  height: 50px;
+}
+
+#list-con {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.container-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+}
+
+.button-con {
+  background: var(--secondary-color);
+  padding: 0.75em;
+}

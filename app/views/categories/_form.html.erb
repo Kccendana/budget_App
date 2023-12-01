@@ -1,0 +1,32 @@
+<%= form_with(model: category) do |f| %>
+  <div class='form-head'>
+    <%= link_to categories_path do %>
+      <i class="fa fa-arrow-left"></i>
+    <% end %>
+    <h2>Add Categories</h2>
+    <div class="actions">
+      <%= f.submit "Next", class: 'btn',style: 'color:white; background-color:transparent;' %>
+    </div>
+  </div>
+  <% if category.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-floating">
+  <%= f.text_field :name, class: 'form-control', id: 'floatingInput', placeholder: 'education' %>
+  <%= f.label :name, "Name", class: 'form-label', for: 'floatingInput' %>
+</div>
+
+  <div class="form-floating">
+  <%= f.text_field :icon, class: 'form-control', id: 'floatingInput', placeholder: 'nike.png' %>
+  <%= f.label :icon, "Icon", class: 'form-label', for: 'floatingInput' %>
+</div>
+<% end %>

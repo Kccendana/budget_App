@@ -1,0 +1,26 @@
+<%= form_for([@category, @payment]) do |f| %>
+  <div class='form-head'>
+    <%= link_to categories_path do %>
+      <i class="fa fa-arrow-left"></i>
+    <% end %>
+    <h2>Payments</h2>
+    <div class="actions">
+      <%= f.submit "Add", class: 'btn', style: 'color:white; background-color:transparent;' %>
+    </div>
+  </div>
+
+  <div class="form-floating">
+    <%= f.text_field :name, class: 'form-control', id: 'floatingInput', placeholder: 'Name' %>
+    <%= f.label :name, "Name", class: 'form-label', for: 'floatingInput' %>
+  </div>
+
+  <div class="form-floating">
+    <%= f.text_field :amount, class: 'form-control', id: 'floatingInput', placeholder: 'Amount' %>
+    <%= f.label :amount, "Amount", class: 'form-label', for: 'floatingInput' %>
+  </div>
+
+  <%= f.hidden_field :user_id, value: @user.id %>
+  <%= f.hidden_field :category_id, value: @category.id %>
+
+  <%= f.submit "Next", class: 'btn', style: 'color:white; background-color:transparent;' %>
+<% end %>

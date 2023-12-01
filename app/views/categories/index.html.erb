@@ -1,0 +1,25 @@
+<div class='form-head'>
+    <%= link_to categories_path do %>
+      <i class="fa fa-arrow-left"></i>
+    <% end %>
+    <h2>Categories</h2>
+    <div class="actions">
+      <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn",style: 'color:white; background-color:transparent;' %>
+    </div>
+  </div>
+<div class= 'container-view'>
+  <% if @categories.nil? %>
+      <h3>Add a Category</h3>
+    <% else %>
+  <div id="list-con">
+   <% @categories.each do |category| %>
+      <%= link_to category_payments_path(category.id) do %>
+         <%= render category %>
+    <% end %>
+   <% end %>
+  </div>
+<% end %>
+<div class='button-con'>
+<%= link_to "Add category", new_category_path, class: 'btn w-100 p-2', style: 'color:white; background-color:#5fb523; border: 1px solid white;' %>
+</div>
+</div>
