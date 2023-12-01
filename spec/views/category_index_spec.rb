@@ -11,25 +11,19 @@ RSpec.feature 'Category', type: :feature do
     sleep 1
   end
   scenario 'User views the list of categories' do
-    # Create some recipes for testing (you can adjust the attributes)
     cat1 = Category.create(name: 'house', icon: 'house.png', user: User.first)
     cat2 = Category.create(name: 'bills', icon: 'bills.png', user: User.first)
 
     visit categories_path
     puts page.html
 
-    # Verify that the recipes are displayed
     expect(page).to have_content(cat1.name)
     expect(page).to have_content(cat2.name)
 
-    # Verify that the descriptions are displayed
     expect(page).to have_css('img')
     expect(page).to have_css("[alt='#{cat1.name}']")
     expect(page).to have_css("[alt='#{cat2.name}']")
 
-    # Verify that the "Delete" buttons are present for each recipe
     expect(page).to have_selector(:link_or_button, 'Add category')
-
-    # You can add more assertions and interactions as needed
   end
 end
